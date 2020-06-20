@@ -39,10 +39,10 @@ def save_imgs(folder, page_url):
     filename = html[a:b]
 
     psd_addrs = []
-    psd_addrs = re.findall(r'http://zjlt.sc.chinaz.com/Files/DownLoad/psd1/[0-9]{6}/psd[0-9]{5}.rar', html)
+    psd_addrs = re.findall(r'http://downsc.chinaz.net/Files/DownLoad/psd1/[0-9]{6}/psd[0-9]{5}.rar', html)
     # ------ 这里最好使用异常处理及多线程编程方式 ------
     try:
-        filepath =  'G:\python3\study\getChinazpsd\\venv\\first\psd\\' + filename + '.rar'
+        filepath =  'G:\\MyPython\\getChinazpsd\\venv\\first\psd\\' + filename + '.rar'
         urllib.request.urlretrieve(psd_addrs[0], filepath)
     except Exception as e:
         if hasattr(e, 'code'):
@@ -77,4 +77,4 @@ def download_mm(folder):
 
 if __name__ == '__main__':
     download_mm('./psd/')
-    #unrardelfile( 'D:\\study\\getChinazpsd\\venv\\first\\psd\\淘宝双11海报PSD海报.rar', 'D:\\study\\getChinazpsd\\venv\\first\\psd\\淘宝双11海报PSD海报\\')
+    #unrardelfile( '.\psd\\淘宝双11海报PSD海报.rar', '.\psd\\淘宝双11海报PSD海报\\')
