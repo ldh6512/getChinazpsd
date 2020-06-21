@@ -77,4 +77,3 @@ def download_mm(folder):
 
 if __name__ == '__main__':
     download_mm('./psd/')
-    #unrardelfile( '.\psd\\淘宝双11海报PSD海报.rar', '.\psd\\淘宝双11海报PSD海报\\')
